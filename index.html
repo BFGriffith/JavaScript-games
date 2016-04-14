@@ -9,6 +9,7 @@
   <title>JavaScript-games</title>
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/hangman.css">
 </head>
 
 <body>
@@ -19,13 +20,19 @@
       </div>
     </header>
     <main>
-      <img src="assets/images/gallows.png" alt="gallows" />
+      <div id="hangman_container">
+        <img id="gallows" src="assets/images/gallows.png" alt="gallows" />
+        <img id="gallows_extension1" src="assets/images/gallows_extension.png" alt="gallows extension" />
+        <img id="gallows_extension2" src="assets/images/gallows_extension.png" alt="gallows extension" />
+
+      </div>
     </main>
 
     <footer>
-      <p>Thanks for playing!</p>
+      <p><em>Thanks for playing!</em></p>
     </footer>
-  </div><!-- END pagewrap -->
+  </div>
+  <!-- END-pagewrap -->
 
   <script src="scripts/hangman.js"></script>
 </body>

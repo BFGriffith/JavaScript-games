@@ -1,0 +1,35 @@
+/*
+Saloon, bank, bath house, and livery stable fronts in Pioneertown, California: an unincorporated and inhabited town built in 1946 as a movie/tv set by, amongst others, Roy Rogers. Photo by Matthew Field, 2008. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation and Creative Commons licenses. Copyleft: This work of art is free; you can redistribute it and/or modify it according to terms of the Free Art License.
+*/
+
+html {
+  background: url(/assets/images/Pioneertown_California.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* hangman graphics-user-interface */
+#hangman_container {
+  display:block;
+  }
+#gallows {
+  position: relative;
+  float: right;
+  z-index: 10;
+}
+#gallows_extension1 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 8;
+}
+#gallows_extension2 {
+  position: absolute;
+  right: 0;
+  bottom: 208px;
+  z-index: 9;
+}
+
+/* hangman media-queries */

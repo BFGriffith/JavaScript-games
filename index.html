@@ -7,33 +7,42 @@
   <meta name="description" content="some rudimentary games as coding katas for basic JavaScript practice: U.C.F. bootcamp, week 3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>JavaScript-games</title>
+  <link href='https://fonts.googleapis.com/css?family=Smokum' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Rye' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
   <link rel="stylesheet" type="text/css" href="assets/css/hangman.css">
 </head>
 
 <body>
-  <div id="pagewrap">
+  <div class="pageWrap">
     <header>
-      <div id="header_contents">
-
-      </div>
+      <nav id="header_contents">
+        <ul>
+          <li><a href="#">HANGMAN</a></li>
+        </ul>
+      </nav>
     </header>
-    <main>
-      <div id="hangman_container">
-        <img id="gallows" src="assets/images/gallows.png" alt="gallows" />
-        <img id="gallows_extension1" src="assets/images/gallows_extension.png" alt="gallows extension" />
-        <img id="gallows_extension2" src="assets/images/gallows_extension.png" alt="gallows extension" />
-
+    <main class="mainContent">
+        <h1 id="hangman_title"><em>hangman</em></h1>
+        <div id="hangman_game">
+        <section id="hangmanContainer">
+          <p>Guess a letter, gunslinger!</p>
+        </section>
+        <aside id="gallowsContainer">
+          <img id="gallows" src="assets/images/gallows.png" alt="gallows" />
+          <img id="gallows_extension1" src="assets/images/gallows_extension.png" alt="gallows extension" />
+          <!-- <img id="gallows_extension2" src="assets/images/gallows_extension.png" alt="gallows extension" /> -->
+        </aside>
       </div>
     </main>
 
-    <footer>
-      <p><em>Thanks for playing!</em></p>
-    </footer>
+
   </div>
   <!-- END-pagewrap -->
-
+  <footer class="stickyFooter">
+    <p><em>Thanks for playing!</em></p>
+  </footer>
   <script src="scripts/hangman.js"></script>
 </body>
 

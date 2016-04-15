@@ -1,8 +1,20 @@
-* { text-decoration: none; }
-main {
-  display: block;
+html, body { height: 100% };
+.pageWrap {
+  display:block;
+  min-height: 100%;
+  margin-bottom: -40px;
+  padding-bottom: auto;
+  }
+nav a { color: white; text-decoration: none; }
+.mainContent {
+  padding-bottom: 40px; /* same height as footer */
+  overflow: auto;
 }
-footer {
+.stickyFooter {
+  margin-top: -40px; /* negative footer height */
+  height: 40px;
+  line-height: 40px;
+  clear: both;
   color: #ffffff;
   background-color: black;
   text-align: center;

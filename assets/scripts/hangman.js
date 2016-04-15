@@ -4,7 +4,7 @@
 /* variables */
 var alphabet, wordBank, guess, guessesList, matchesList, matchesNumber, bodypartsRemain, mysteryWord, feedbackMessages;
 
-/* hangman controller */
+/* hangman configuration */
 function configAssets() {
   var alphabet =
     ['a', 'b', 'c', 'd', 'e', 'f', 'g',

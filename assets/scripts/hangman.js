@@ -25,6 +25,7 @@
       "frontier",
       "huckster"
     ],
+
     /* word selection */
     configHangman: function() {
       this.mysteryWord = this.wordBank[Math.floor(Math.random() * this.wordBank.length)];
@@ -69,7 +70,7 @@
       document.getElementById("hangmanTargetWord").innerHTML = hangman.matchesList.join(" ");
     }
 
-  }/*END-hangman-configuration_object*/
+  } /*END-hangman-configuration_object*/
 
   /* EXECUTE */
   hangman.configHangman();
@@ -84,24 +85,28 @@
     console.log(letterOrder);
 
     if (letterOrder >= 0) {
-      hangman.showTarget(letterOrder);
-      var letterOrder = hangman.targetWordArray.indexOf(guess);
-      /* NEXT-GAME: */
-  if (hangman.gameOverPardner()) {
-    console.log("Game Over Man!");
-    hangman.configHangman();
-  }
+      while (letterOrder >= 0) {
+        hangman.showTarget(letterOrder);
+        var letterOrder = hangman.targetWordArray.indexOf(guess);
+      }
+    } else {
+      hangman.updateLettersGuessed(guess);
     }
-
-
+    /* NEXT-GAME: */
+    if (hangman.gameOverPardner()) {
+    hangman.configHangman();
+    }
+    /*
+    if (hangman.gameOverPardner() && (hangman.targetWordArray.length == hangmanTargetWord.length)) {
+      var victory = document.getElementById('totalWins');
+      victory.innerHTML = victory.innerHTML + "You\'re the fastest gunslinger in the West! Congratulations, victory is yours, and you\'ve just escaped a hanging at high noon.";
+    } else {
+      hangman.configHangman();
+    }
+    */
   };
 
+
+  // };
+
 })(window);
-/*
-feedbackMessages = {
-  victory: "You're the fastest gunslinger in the West! Congratulations, victory is yours, and you've just escaped a hanging at high noon.",
-  loss: "You lose pardner... Time for you to do the gallows dance.",
-  alreadyGuessed: "You already guessed that letter sucker, try again.",
-  validateLetter: "Woah there cowboy. You must enter a valid letter from A-Z!"
-};
-*/

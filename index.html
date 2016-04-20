@@ -14,20 +14,29 @@
   <link rel="stylesheet" type="text/css" href="assets/css/hangman.css">
 </head>
 
-<body>
+<body class="pushMenu">
   <div class="pageWrap">
     <header>
-      <nav id="header_contents">
+      <nav class="topMenu" id="header_contents">
         <ul>
           <li><a href="#">HANGMAN</a></li>
+          <li id="separators">&#8268; &bull; &#8269;</li>
+          <li><a href="#">PSYCHIC</a></li>
         </ul>
       </nav>
     </header>
     <main class="mainContent">
-        <h1 id="hangman_title"><em>hangman</em></h1>
-        <div id="hangman_game">
+      <h1 id="hangman_title"><em>hangman</em></h1>
+      <div id="hangman_game">
         <section id="hangmanContainer">
-          <p>Guess a letter, gunslinger!</p>
+          <p class="hangman_labels">Draw your sixgun and press any trigger-key to begin, gunslinger!</p>
+          <p class="hangman_labels">WINS:</p>
+          <p class="hangman_counters" id="totalWins"></p>
+          <p class="hangman_counters" id="hangmanTargetWord"></p>
+          <p class="hangman_labels">GUESSES REMAINING:</p>
+          <p class="hangman_counters" id="bodypartsRemain"> </p>
+          <p class="hangman_labels">LETTERS-GUESSED:</p>
+          <p class="hangman_counters" id="guessed"></p>
         </section>
         <aside id="gallowsContainer">
           <img id="gallows" src="assets/images/gallows.png" alt="gallows" />
@@ -37,13 +46,19 @@
       </div>
     </main>
 
-
+    <div class="pushFooter"></div>
   </div>
   <!-- END-pagewrap -->
   <footer class="stickyFooter">
     <p><em>Thanks for playing!</em></p>
+    <nav>
+      <a href="https://twitter.com/ForbesGriffith"><span class="network-name">Twitter</span></a>
+      <a href="https://github.com/BFGriffith"><span class="network-name">GitHub</span></a>
+      <a href="http://stackoverflow.com/users/5067139/ben-griffith"><span class="network-name">Stack-Overflow</span></a>
+      <a href="https://www.linkedin.com/in/bfgriffith"><span class="network-name">LinkedIn</span></a>
+    </nav>
   </footer>
-  <script src="scripts/hangman.js"></script>
+  <script src="assets/scripts/hangman.js"></script>
 </body>
 
 </html>

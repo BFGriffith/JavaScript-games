@@ -13,12 +13,20 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Rye', cursive; }
 
 /* hangman graphics-user-interface */
 #hangman_title {
-  color: #ffffff;
-  font-size: 20pt;
+  color: #81A2BE;
+  font-size: 3em;
   text-align: center;
   padding: 5px;
 }
+#separators { color: #ffffff; }
 #hangman_game { color: #ffffff; }
+.hangman_labels, .hangman_counters {
+  text-align: center;
+  font-size: 2em;
+  line-height: 125%;
+}
+.hangman_labels { color: #6988D9; }
+.hangman_counters { color: #2F61D0; }
 #gallows {
   position: relative;
   float: right;

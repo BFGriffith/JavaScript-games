@@ -50,6 +50,18 @@
       this.bodypartsRemain--;
       document.getElementById("bodypartsRemain").innerHTML = this.bodypartsRemain;
     },
+    /* GAME-OVER conditionals */
+    gameOverPardner: function() {
+      if (this.matchesList.indexOf("-") == -1) {
+        this.winsCounter++; //victory!
+        document.getElementById("totalWins").innerHTML = this.winsCounter;
+        return true;
+      } else if (this.bodypartsRemain > 0) {
+        return false;
+      } else {
+        return true;
+      }
+    },
     /* VIEW */
     showTarget: function(letterPosition) {
       this.matchesList[letterPosition] = this.targetWordArray[letterPosition];
@@ -74,6 +86,11 @@
     if (letterOrder >= 0) {
       hangman.showTarget(letterOrder);
       var letterOrder = hangman.targetWordArray.indexOf(guess);
+      /* NEXT-GAME: */
+  if (hangman.gameOverPardner()) {
+    console.log("Game Over Man!");
+    hangman.configHangman();
+  }
     }
 
 

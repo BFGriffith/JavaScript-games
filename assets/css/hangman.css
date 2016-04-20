@@ -19,7 +19,9 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Rye', cursive; }
   padding: 5px;
 }
 #separators { color: #ffffff; }
-#hangman_game { color: #ffffff; }
+#hangman_game {
+  color: #ffffff;
+}
 .hangman_labels, .hangman_counters {
   text-align: center;
   font-size: 2em;

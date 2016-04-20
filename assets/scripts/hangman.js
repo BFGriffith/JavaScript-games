@@ -1,14 +1,12 @@
 /* HANGMAN */
 (function(window) {
   'use strict';
-  // var alphabet, wordBank, guess, guessesList, matchesList, matchesNumber, bodypartsRemain, mysteryWord, feedbackMessages;
-  /*
-  var alphabet =
-    ['a', 'b', 'c', 'd', 'e', 'f', 'g',
-    'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
-    'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-  */
-  /* functions in object refactor based on classwork examples */
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var MorriconeGoodBadUgly = new Audio('/assets/sounds/Ennio_Morricone-GoodBadUgly.oog');
+    MorriconeGoodBadUgly.play();
+  });
+
+  /* function definitions in object refactor based on classwork examples */
   var hangman = {
     bodypartsRemain: 10,
     targetWordArray: [],
@@ -23,7 +21,9 @@
       "colt",
       "cowboy",
       "frontier",
-      "huckster"
+      "huckster",
+      "cheater",
+      "grifter"
     ],
 
     /* word selection */
@@ -70,7 +70,7 @@
       document.getElementById("hangmanTargetWord").innerHTML = hangman.matchesList.join(" ");
     }
 
-  } /*END-hangman-configuration_object*/
+  }/*END-hangman-configuration_object*/
 
   /* EXECUTE */
   hangman.configHangman();

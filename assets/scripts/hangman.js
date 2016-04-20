@@ -1,10 +1,12 @@
-/* HANGMAN */
+/* HANGMAN 0.1 */
 (function(window) {
   'use strict';
+  /*
   document.addEventListener("DOMContentLoaded", function(event) {
     var MorriconeGoodBadUgly = new Audio('/assets/sounds/Ennio_Morricone-GoodBadUgly.oog');
     MorriconeGoodBadUgly.play();
   });
+  */
 
   /* function definitions in object refactor based on classwork examples */
   var hangman = {

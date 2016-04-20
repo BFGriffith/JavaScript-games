@@ -25,8 +25,8 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Rye', cursive; }
   font-size: 2em;
   line-height: 125%;
 }
-.hangman_labels { color: #6988D9; }
-.hangman_counters { color: #2F61D0; }
+.hangman_labels { color: #A88119; }
+.hangman_counters { color: #C22126; }
 #gallows {
   position: relative;
   float: right;

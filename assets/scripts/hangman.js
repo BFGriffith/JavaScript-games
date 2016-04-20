@@ -50,6 +50,16 @@
 
   hangman.configHangman();
 
+  document.onkeyup = function execute(event) {
+
+    var guess = String.fromCharCode(event.keyCode).toUpperCase();
+    var letterOrder = hangman.targetWordArray.indexOf(guess);
+
+    console.log(guess);
+    console.log(hangman.targetWordArray);
+
+  };
+
 })(window);
 /*
 feedbackMessages = {

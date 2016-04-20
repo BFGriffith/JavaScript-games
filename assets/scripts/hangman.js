@@ -43,20 +43,27 @@
       document.getElementById("guessed").innerHTML = " ";
     },
 
-    /* guessed-letters... */
+    /* guessed-letters */
+    updateLettersGuessed: function(incorrectLetter) {
+      this.lettersGuessed.push(incorrectLetter);
+      document.getElementById("guessed").innerHTML = this.lettersGuessed.join(", ");
+      this.bodypartsRemain--;
+      document.getElementById("bodypartsRemain").innerHTML = this.bodypartsRemain;
+    },
 
+  }/*END-hangman-configuration_object*/
 
-  } /*END-hangman-configuration_object*/
-
+  /* EXECUTE */
   hangman.configHangman();
 
   document.onkeyup = function execute(event) {
 
-    var guess = String.fromCharCode(event.keyCode).toUpperCase();
+    var guess = String.fromCharCode(event.keyCode).toLowerCase();
     var letterOrder = hangman.targetWordArray.indexOf(guess);
 
     console.log(guess);
     console.log(hangman.targetWordArray);
+    console.log(letterOrder);
 
   };
 

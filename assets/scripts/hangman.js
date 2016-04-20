@@ -50,6 +50,12 @@
       this.bodypartsRemain--;
       document.getElementById("bodypartsRemain").innerHTML = this.bodypartsRemain;
     },
+    /* VIEW */
+    showTarget: function(letterPosition) {
+      this.matchesList[letterPosition] = this.targetWordArray[letterPosition];
+      this.targetWordArray[letterPosition] = "-";
+      document.getElementById("hangmanTargetWord").innerHTML = hangman.matchesList.join(" ");
+    }
 
   }/*END-hangman-configuration_object*/
 
@@ -64,6 +70,12 @@
     console.log(guess);
     console.log(hangman.targetWordArray);
     console.log(letterOrder);
+
+    if (letterOrder >= 0) {
+      hangman.showTarget(letterOrder);
+      var letterOrder = hangman.targetWordArray.indexOf(guess);
+    }
+
 
   };
 

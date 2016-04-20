@@ -7,27 +7,58 @@
   <meta name="description" content="some rudimentary games as coding katas for basic JavaScript practice: U.C.F. bootcamp, week 3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>JavaScript-games</title>
+  <link href='https://fonts.googleapis.com/css?family=Smokum' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Rye' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/hangman.css">
 </head>
 
-<body>
-  <div id="pagewrap">
+<body class="pushMenu">
+  <div class="pageWrap">
     <header>
-      <div id="header_contents">
-
-      </div>
+      <nav class="topMenu" id="header_contents">
+        <ul>
+          <li><a href="#">HANGMAN</a></li>
+          <li id="separators">&#8268; &bull; &#8269;</li>
+          <li><a href="#">PSYCHIC</a></li>
+        </ul>
+      </nav>
     </header>
-    <main>
-
+    <main class="mainContent">
+      <h1 id="hangman_title"><em>hangman</em></h1>
+      <div id="hangman_game">
+        <section id="hangmanContainer">
+          <p class="hangman_labels">Draw your sixgun and press any trigger-key to begin, gunslinger!</p>
+          <p class="hangman_labels">WINS:</p>
+          <p class="hangman_counters" id="totalWins"></p>
+          <p class="hangman_counters" id="hangmanTargetWord"></p>
+          <p class="hangman_labels">GUESSES REMAINING:</p>
+          <p class="hangman_counters" id="bodypartsRemain"> </p>
+          <p class="hangman_labels">LETTERS-GUESSED:</p>
+          <p class="hangman_counters" id="guessed"></p>
+        </section>
+        <aside id="gallowsContainer">
+          <img id="gallows" src="assets/images/gallows.png" alt="gallows" />
+          <img id="gallows_extension1" src="assets/images/gallows_extension.png" alt="gallows extension" />
+          <!-- <img id="gallows_extension2" src="assets/images/gallows_extension.png" alt="gallows extension" /> -->
+        </aside>
+      </div>
     </main>
 
-    <footer>
-      <p>Thanks for playing!</p>
-    </footer>
-  </div><!-- END pagewrap -->
-
-  <script src="scripts/hangman.js"></script>
+    <div class="pushFooter"></div>
+  </div>
+  <!-- END-pagewrap -->
+  <footer class="stickyFooter">
+    <p><em>Thanks for playing!</em></p>
+    <nav>
+      <a href="https://twitter.com/ForbesGriffith"><span class="network-name">Twitter</span></a>
+      <a href="https://github.com/BFGriffith"><span class="network-name">GitHub</span></a>
+      <a href="http://stackoverflow.com/users/5067139/ben-griffith"><span class="network-name">Stack-Overflow</span></a>
+      <a href="https://www.linkedin.com/in/bfgriffith"><span class="network-name">LinkedIn</span></a>
+    </nav>
+  </footer>
+  <script src="assets/scripts/hangman.js"></script>
 </body>
 
 </html>

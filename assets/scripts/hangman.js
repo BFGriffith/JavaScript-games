@@ -3,7 +3,7 @@
   'use strict';
   /*
   document.addEventListener("DOMContentLoaded", function(event) {
-    var MorriconeGoodBadUgly = new Audio('/assets/sounds/Ennio_Morricone-GoodBadUgly.oog');
+    var MorriconeGoodBadUgly = new Audio('/assets/sounds/Ennio_Morricone-GoodBadUgly.ogg');
     MorriconeGoodBadUgly.play();
   });
   */

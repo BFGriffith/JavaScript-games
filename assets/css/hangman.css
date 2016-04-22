@@ -15,6 +15,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Rye', cursive; }
 #hangman_title {
   color: #81A2BE;
   font-size: 3em;
+  text-shadow: 2px 2px 8px #000000;
   text-align: center;
   padding: 5px;
 }
@@ -25,8 +26,14 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Rye', cursive; }
   font-size: 2em;
   line-height: 125%;
 }
-.hangman_labels { color: #A88119; }
-.hangman_counters { color: #C22126; }
+.hangman_labels {
+  color: #A88119;
+  text-shadow: 2px 2px 4px #000000;
+  }
+.hangman_counters {
+  color: #C22126;
+  text-shadow: 2px 2px 4px #000000;
+  }
 #gallows {
   position: relative;
   float: right;
